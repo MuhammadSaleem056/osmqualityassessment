@@ -16,4 +16,7 @@ Step 2: Get the data
 Step 3: Idea formation
 - Most of the data that is extracted is in the form of polygons, multi-lines and lines (.geojson) and in-order to visualise it with respect to quality metric(s) it needs to be pre-processed.
 - The quality metric-1 that is defined in "User-requirement-quality-metircs", which is the tag-completion and tag selection is done according to the user requirements. Idea behind it is visualise how much the tags are complete in certain part of the OpenStreetMap (OSM).
-- Now, HOWs and WHATs are defined now we can just normalise with respect to total number of polygons that represent all the keys (e.g amenity = hospital) and total number of polygons that represent certain tag combination of that key. For example if we want to visualise the tag completion of the hospital with tag combination of 
+- Now, HOWs and WHATs are defined now we can just normalise with respect to total number of polygons that represent all the keys (e.g amenity = hospital) and total number of polygons that represent certain tag combination of that key. For example if we want to visualise the tag completion of the hospital with tag combination of emergency=* then we divide have to divide the number of polygons with tag combination of emergency=* to the number of polygons of just hospital key.
+
+Step 4: Spatial analysis
+
