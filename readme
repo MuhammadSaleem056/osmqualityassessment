@@ -3,5 +3,17 @@ in order to this collection of OverPass queries are used and it can be visualise
 
 
 Steps to be followed in order to assess and visualise the quality of OpenStreetMap (OSM)
-Step 1:
-- You have to make sure you do your homework with literature study 
+Step 1: Preparation
+- You have to make sure you do your homework with literature study on what is the end-goal.
+- For this repository Quality assessment is with respect to disaster managers in humanitarian crisis.
+- Develop quality metric accordingly.
+- User requirement is defined in the "User-requirement-quality-metircs" file in the directory.
+
+Step 2: Get the data
+- Using Overpass API key to get the required data from the OpenStreetMap (OSM).
+- Overpass API that are used is defined in the "Overpass-APIs" file in the directory
+
+Step 3: Idea formation
+- Most of the data that is extracted is in the form of polygons, multi-lines and lines (.geojson) and in-order to visualise it with respect to quality metric(s) it needs to be pre-processed.
+- The quality metric-1 that is defined in "User-requirement-quality-metircs", which is the tag-completion and tag selection is done according to the user requirements. Idea behind it is visualise how much the tags are complete in certain part of the OpenStreetMap (OSM).
+- Now, HOWs and WHATs are defined now we can just normalise with respect to total number of polygons that represent all the keys (e.g amenity = hospital) and total number of polygons that represent certain tag combination of that key. For example if we want to visualise the tag completion of the hospital with tag combination of 
