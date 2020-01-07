@@ -1,0 +1,6 @@
+
+
+To get the data of OSM in a certain time.
+[date:"2014-05-06T00:00:00Z"];
+( node({{bbox}}); <; >; );
+out meta;
