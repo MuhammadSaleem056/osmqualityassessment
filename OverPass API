@@ -4,3 +4,14 @@ To get the data of OSM in a certain time.
 [date:"2014-05-06T00:00:00Z"];
 ( node({{bbox}}); <; >; );
 out meta;
+
+
+node
+  [building](newer:"2019-01-01T07:00:00Z")     // adjust date as needed
+  ({{bbox}})->.newnodes;
+
+// List all well-known power users here, which should be excluded from the result list:
+(.newnodes; - node.newnodes(user:Nakaner, "Nakaner-repair", bigbug21, mapper999);)->.newnodes;
+
+// Output
+.newnodes out meta;
