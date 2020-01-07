@@ -16,3 +16,30 @@ node
 // Output
 .newnodes out meta;
 
+
+/*
+This query looks for nodes, ways and relations 
+with the given key/value combination.
+Choose your region and hit the Run button above!
+*/
+[out:json][timeout:25][date:"2020-01-01T00:00:00Z"];
+// gather results
+(
+  // query part for: “amenity=hospital”
+  nwr["amenity"="hospital"]({{bbox}});
+  
+);
+// print results
+out meta;
+
+
+[out:json][timeout:3600];
+
+  nwr["building:levels"]["building:material"]["roof:material"]["building:age"]["building:condition"]["capacity:persons"]["source"]({{bbox}});
+
+/*added by auto repair*/
+(._;>;);
+/*end of auto repair*/
+out;
+
+
